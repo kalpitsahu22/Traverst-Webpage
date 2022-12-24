@@ -1,0 +1,288 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4f4;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.button_1 {
+  height: 38px;
+  background: #306a3b;
+  border: 0;
+  padding-left: 20px;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding-right: 20px;
+  color: #ffffff;
+}
+
+.button_1:hover {
+  background-color: #41854e;
+}
+
+/* Global */
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  /* display: flex; */
+}
+
+.dark {
+  padding: 15px;
+  background: #285430;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+/* header */
+header {
+  background: #a4be7b;
+  color: #ffffff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #285430 5px solid;
+}
+
+header a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header li {
+  float: left;
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding {
+  float: left;
+}
+
+header #branding h1 {
+  margin: 0;
+}
+
+header nav {
+  float: right;
+  margin-top: 10px;
+}
+
+header .highlight,
+header .current a {
+  color: #285430;
+  font-weight: bold;
+}
+
+header a:hover {
+  color: #285430;
+  font-weight: bold;
+}
+
+/* animation */
+#showcase .waviy {
+  position: relative;
+}
+#showcase .waviy span {
+  position: relative;
+  text-align: center;
+  margin-top: 10%;
+  display: inline-block;
+  font-size: 60px;
+  font-weight: bolder;
+  color: #fff;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i))
+}
+
+
+#showcase .waviy2 {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 60px;
+}
+#showcase .waviy2 span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  font-size: 30px;
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var());
+  
+}
+/* showcase0 */
+
+#showcase {
+  min-height: 400px;
+  min-width: 400px;
+  background-image: url("../img/showcase.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #ffffff;
+  object-fit: fill;
+}
+
+#showcase h1 {
+  margin-top: 100px;
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+#showcase p {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+#newsletter {
+  padding: 15px;
+  color: #285430;
+  background: #a4be7b;
+}
+
+#newsletter h1 {
+  float: left;
+}
+
+#newsletter form {
+  float: right;
+  margin-top: 15px;
+}
+
+#newsletter input {
+  margin: 7px;
+  padding: 7px;
+  height: 25px;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* boxes */
+
+#boxes {
+  margin-top: 20px;
+  /* background-image: fit;
+    align-items: center; */
+}
+
+#boxes .box {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  color: #285430;
+  text-align: center;
+}
+
+#boxes .box p {
+  color: #285430;
+  font-weight: 500;
+}
+
+#boxes .box img {
+  /* align-items: center; */
+  width: 90px;
+
+  /* height: 20px; */
+}
+
+/* sidebar */
+aside#sidebar {
+  float: right;
+  width: 30%;
+  margin-top: 10px;
+}
+
+aside#sidebar .quote input,
+aside#sidebar .quote textarea {
+  width: 90%;
+  padding: 5px;
+}
+
+/* main-col */
+article#main-col {
+  float: left;
+  width: 65%;
+}
+
+/* Services */
+
+ul#services li {
+  list-style: none;
+  padding: 20px;
+  border: #cccccc solid 1px;
+  margin-bottom: 5px;
+  background: #e6e6e6;
+}
+
+footer {
+  padding: 20px;
+  margin-top: 20px;
+  color: #285430;
+  font-weight: 600;
+  background-color: #a4be7b;
+  text-align: center;
+}
+
+/* responiveness */
+
+@media (max-width: 768px) {
+  header #branding,
+  header nav,
+  header nav li, #newsletter h1, #newsletter form, #boxes .box, article#main-col, aside#sidebar {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  header {
+    padding-bottom: 20px;
+  }
+
+  #showcase h1{
+    margin-top: 40px;
+  }
+
+  #newsletter button, .quote button {
+    display: block;
+    width: 100%;
+  }
+
+  #newsletter form input[type="email"],.quote input, .quote textarea{
+    width: 100%;
+    margin-bottom: 20px;
+}
+}
+
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
+
+
+@keyframes waviy {
+  0%,20%,40%,60%,80%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-15px)
+  }
+}
